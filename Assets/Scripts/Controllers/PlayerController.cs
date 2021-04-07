@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Instance == null)
             Instance = this;
-        _mainCam = Camera.main;
+        _mainCam = FindObjectOfType<CameraController>().GetComponent<Camera>();
         _rb = GetComponent<Rigidbody>();
     }
     private void Start()
